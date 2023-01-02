@@ -1,0 +1,140 @@
+main{
+    .textoCentral{
+        display: flex;
+        p{
+            @extend %text-padding;
+            list-style: none;
+            margin-top: 50px;
+            font-size: 1.5rem;
+            }
+            .imagenPrincipal{
+                width: 100%;
+                border-radius: 40px;
+                margin-top: $espaciado-triple;
+                padding: $espaciado-triple;
+                &:hover{
+                    transform: scale(1.0);
+                    padding: $espaciado-mediopx;
+                }
+            }
+    }
+    &.mainServicios{
+        margin: $espaciado-doble;
+        h2{
+            @extend %text-bold;
+            margin: $espaciado-doble;
+            font-size: 1.1rem;
+        }
+        .sectionServicios{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            p{
+                @extend %text-padding;
+                margin-top: 7px;
+                font-size: 15px;
+                text-align: center;
+            }
+            img{
+                width: 100% !important;
+                object-fit: cover;
+                border-radius: 12px;
+                height: 12rem;
+                margin-top: $espaciado-2rem;
+                animation-name: servicios;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            .itemSectionContent{
+                @extend %flex-items;
+            }
+            .card-title{
+                text-align: center;
+                padding: 1rem;
+                margin: 1rem;
+            }
+
+            .itemSectionContent h6{
+                text-align: center;
+                font-weight: bold
+            }
+
+            .botonServicios{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 5px;
+                padding: 10px 15px;
+            }
+        }
+    }
+    &.mainNosotros{
+        margin: $espaciado-doble;
+        h1{
+            margin-top: $espaciado-doble;
+            padding-bottom: $espaciado-normal;
+            text-align: center;
+        }
+        .sectionNosotros{
+            @extend %flex-items;
+            padding: $espaciado-1rem;
+            margin: $espaciado-1rem;
+            img{
+                @include sizes(100px, 100px)}
+            h2{
+                @extend %text-bold;
+                height: $espaciado-triple;
+                padding-top: $espaciado-triple;
+                font-size: 1.2rem;}
+            p{
+                margin: $espaciado-triple;
+                padding: 30px 0;
+                font-size: 25px;
+                text-align: center;
+            }
+            div p{
+                text-align: center;
+                font-size: $espaciado-1rem;
+                margin-top: 4.5rem;
+            }
+        }
+        
+    }
+    &.imagenesAlgunosClientes{
+        display: grid;
+        @include grid-algunos(1, 10px);
+        margin-top: $espaciado-normal;
+        padding: 0 20px;}
+        img{
+            width:  100%;
+            object-fit: cover;
+            border-radius: $espaciado-triple;}
+            &:first-child{
+                padding-top: $espaciado-doble;
+    }
+    
+    &.redess{
+        @extend %flex-content;
+        padding: $espaciado-normal;
+        img{
+            @include sizes(3rem, 3rem);
+            margin: 0.5rem;
+            border-radius: 0;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.sectionContacto{
+    @include margin-padding(50px, 50px);
+    & + .h4Contactanos{
+        text-align: center;
+        margin-top: $espaciado-doble;
+    }
+    label{
+        font-weight: bold;
+    }
+}

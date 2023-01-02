@@ -1,0 +1,349 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"); /* para revisar las dimensiones de mis elementos. Me sirve además para saber como se encuentran separados los elementos y saber si estan bien espaciados entre si 
+
+* {
+    outline: 1px solid red
+    }
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: transparent;
+}
+
+body {
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: auto;
+  font-family: "Roboto", sans-serif !important;
+}
+
+header .logoInicio {
+  width: 250px;
+}
+header.headerInicio {
+  justify-content: space-evenly;
+  padding: 10px;
+}
+header nav ul {
+  display: flex;
+  column-gap: 5px;
+  list-style: none;
+}
+header nav ul li a {
+  color: black;
+}
+header nav ul li:hover {
+  transform: scale(0.9);
+  background-color: rgb(247, 240, 240);
+}
+header nav a {
+  list-style: none;
+  background-color: transparent;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  font-size: large;
+  color: black !important;
+  font-weight: bold !important;
+}
+header .carroCompras img {
+  width: 2rem;
+}
+
+main .textoCentral {
+  display: flex;
+}
+main .textoCentral p {
+  list-style: none;
+  margin-top: 50px;
+  font-size: 1.5rem;
+}
+main .textoCentral .imagenPrincipal {
+  width: 100%;
+  border-radius: 40px;
+  margin-top: 30px;
+  padding: 30px;
+}
+main .textoCentral .imagenPrincipal:hover {
+  transform: scale(1);
+  padding: 5px;
+}
+main.mainServicios {
+  margin: 20px;
+}
+main.mainServicios h2 {
+  margin: 20px;
+  font-size: 1.1rem;
+}
+main.mainServicios .sectionServicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+main.mainServicios .sectionServicios p {
+  margin-top: 7px;
+  font-size: 15px;
+  text-align: center;
+}
+main.mainServicios .sectionServicios img {
+  width: 100% !important;
+  object-fit: cover;
+  border-radius: 12px;
+  height: 12rem;
+  margin-top: 2rem;
+  animation-name: servicios;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+main.mainServicios .sectionServicios .card-title {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+main.mainServicios .sectionServicios .itemSectionContent h6 {
+  text-align: center;
+  font-weight: bold;
+}
+main.mainServicios .sectionServicios .botonServicios {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  padding: 10px 15px;
+}
+main.mainNosotros {
+  margin: 20px;
+}
+main.mainNosotros h1 {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+main.mainNosotros .sectionNosotros {
+  padding: 1rem;
+  margin: 1rem;
+}
+main.mainNosotros .sectionNosotros img {
+  width: 100px;
+  height: 100px;
+}
+main.mainNosotros .sectionNosotros h2 {
+  height: 30px;
+  padding-top: 30px;
+  font-size: 1.2rem;
+}
+main.mainNosotros .sectionNosotros p {
+  margin: 30px;
+  padding: 30px 0;
+  font-size: 25px;
+  text-align: center;
+}
+main.mainNosotros .sectionNosotros div p {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 4.5rem;
+}
+main.imagenesAlgunosClientes {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+main img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+main:first-child {
+  padding-top: 20px;
+}
+main.redess {
+  padding: 10px;
+}
+main.redess img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem;
+  border-radius: 0;
+}
+main.redess img:hover {
+  transform: scale(1.1);
+}
+
+.sectionContacto {
+  margin: 50px;
+  padding: 50px;
+}
+.sectionContacto + .h4Contactanos {
+  text-align: center;
+  margin-top: 20px;
+}
+.sectionContacto label {
+  font-weight: bold;
+}
+
+footer {
+  align-items: center;
+  padding: 10px;
+  margin-top: auto;
+}
+footer .copyright {
+  margin-left: 5px;
+  padding: 20px 0;
+}
+footer .imgDDA {
+  width: 20px;
+  height: 20px;
+}
+footer p {
+  margin-top: 0.7rem;
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+footer .liveChat img {
+  width: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .imagenPrincipal {
+    width: 700px;
+    height: 500px;
+  }
+  .textoCentral {
+    padding: 2rem;
+  }
+  /* para agregar grid debes colocar primero el display, luego si lo quieres en columnas o rows (o inclusive uno sólo) y posterior darle valores. En este caso el 3 es para "3 columnas" y el 1FR es para que se repita la misma unidad para las imagenes que trabajaré. Luego agrego un gap entre las imagenes. OJO, debes remover los margin y padding pre existentes en las clases hijos y a su vez cualquier float que posea. */
+  main.imagenesAlgunosClientes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .botonMenuMobile {
+    display: none;
+  }
+  .sectionNosotros {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+    padding: 3rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .mainServicios h2 {
+    font-size: 1.3em;
+  }
+  .imagenesAlgunosClientes img {
+    width: 100%;
+    height: 350px;
+  }
+  .imagenesAlgunosClientes img:first-child {
+    padding-top: 0px;
+  }
+  .imagenesAlgunosClientes {
+    padding: 0;
+  }
+  main.mainServicios .sectionServicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sectionServicios h5 {
+    font-weight: bold;
+  }
+  .botonServicios {
+    gap: 5px;
+  }
+  .sumar-restar {
+    padding: 10px 10px;
+  }
+  .itemSectionContent h6 {
+    text-align: center;
+    font-weight: bold;
+  }
+  main .sectionServicios img {
+    width: 50%;
+  }
+  main.mainServicios .sectionServicios img {
+    width: 25%;
+  }
+  .sectionContacto {
+    margin: 100px;
+    padding: 0 450px;
+  }
+  .carroCompras img {
+    width: 2rem;
+  }
+  .liveChat {
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+  }
+  .liveChat img {
+    width: 3.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .row-fix {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    flex-wrap: wrap;
+  }
+  .row-fix > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+}
+main.mainServicios .sectionServicios .itemSectionContent, main.mainNosotros .sectionNosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .textoCentral p, main.mainServicios .sectionServicios p {
+  text-align: center;
+  padding: 30px;
+}
+
+main.redess, footer {
+  display: flex;
+  justify-content: center;
+}
+
+header.headerInicio, footer .copyright {
+  display: flex;
+  align-items: center;
+}
+
+main.mainServicios h2, main.mainNosotros .sectionNosotros h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */

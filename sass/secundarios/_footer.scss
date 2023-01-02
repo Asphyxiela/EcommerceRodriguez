@@ -1,0 +1,25 @@
+footer{
+    @extend %flex-content;
+    align-items: center;
+    // background-color: $color-header-footer;
+    padding: $espaciado-normal;
+    margin-top: auto;
+    .copyright{
+        @extend %flex-align-items;
+        margin-left: $espaciado-mediopx;
+        padding: 20px 0;
+    }
+    .imgDDA{
+        @include sizes(20px, 20px);
+    }
+    p{
+        margin-top: 0.7rem;
+        margin-right: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+    .liveChat img{
+        width: 2.5rem;
+    }
+}
+    

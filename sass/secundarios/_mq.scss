@@ -1,0 +1,142 @@
+@media screen and (min-width: 768px){
+
+    .imagenPrincipal{
+        @include sizes(700px, 500px);
+    }
+
+    .textoCentral{
+        padding: $espaciado-2rem;
+    }
+
+     /* para agregar grid debes colocar primero el display, luego si lo quieres en columnas o rows (o inclusive uno sólo) y posterior darle valores. En este caso el 3 es para "3 columnas" y el 1FR es para que se repita la misma unidad para las imagenes que trabajaré. Luego agrego un gap entre las imagenes. OJO, debes remover los margin y padding pre existentes en las clases hijos y a su vez cualquier float que posea. */
+     
+     main.imagenesAlgunosClientes{
+        display: grid;
+        @include grid-algunos(3, 20px);
+        margin-top: $espaciado-normal;
+        padding: $espaciado-normal;
+    }
+
+    .botonMenuMobile{
+        display: none;
+    }
+
+    .sectionNosotros{
+        display: flex;
+        justify-content: center;
+        @include margin-padding(3rem, 3rem);
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    .mainServicios h2{
+        font-size: 1.3em;
+    }
+
+    .imagenesAlgunosClientes img{
+        @include sizes(100%, 350px);
+    }
+    
+    .imagenesAlgunosClientes img:first-child{
+        padding-top: 0px;
+     }
+     
+     .imagenesAlgunosClientes{
+         padding: 0;
+     }
+
+     main.mainServicios .sectionServicios {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sectionServicios h5{
+        font-weight: bold;
+    }
+
+    .botonServicios{
+        gap: 5px;
+    }
+
+    .sumar-restar{
+        padding: 10px 10px;
+    }
+
+    .itemSectionContent h6{
+        text-align: center;
+        font-weight: bold
+    }
+
+    main .sectionServicios img{
+        width: 50%;
+    }
+
+    main.mainServicios .sectionServicios img{
+        width: 25%;
+    }
+
+    .sectionContacto{
+        margin: 100px;
+        padding: 0 450px;
+    }
+
+    .carroCompras img{
+        width: 2rem;
+      }
+
+    .liveChat{
+        position: absolute;
+        right: 0;
+        z-index: 9999;
+    }
+
+    :root {
+        --primary-color: #fff;
+        --secondary-color: #000;
+        --text-color: #000;
+        --bg-color: #fff;
+    }
+  
+    .modo-oscuro {
+        --primary-color: #000;
+        --secondary-color: #fff;
+        --text-color: #fff;
+        --bg-color: #000;
+    }
+
+    .activar-modo-oscuro {
+        background: var(--secondary-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }      
+  
+    .liveChat img {
+        width: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .row-fix{
+        --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            flex-wrap: wrap;
+        }
+    .row-fix>* {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-top: var(--bs-gutter-y);
+    }
+}
