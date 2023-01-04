@@ -34,8 +34,12 @@ window.onload = function() {
   }
 };
 
+if (document.querySelector(".botonClickeado") != null) {
 const clickFormulario = document.querySelector(".botonClickeado")
 clickFormulario.addEventListener("click", submitForm, true)
+} else {
+
+}
 
 function submitForm( event ) {
   // event.preventDefault()
