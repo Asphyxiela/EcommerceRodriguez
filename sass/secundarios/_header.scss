@@ -15,7 +15,7 @@ header{
         list-style: none;
                 li{
                     a{
-                        color: black;
+                        color: var(--bg-color);
                     }
                     &:hover{
                         transform: scale(0.9);

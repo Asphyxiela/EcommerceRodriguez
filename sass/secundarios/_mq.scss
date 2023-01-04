@@ -95,30 +95,7 @@
         position: absolute;
         right: 0;
         z-index: 9999;
-    }
-
-    :root {
-        --primary-color: #fff;
-        --secondary-color: #000;
-        --text-color: #000;
-        --bg-color: #fff;
-    }
-  
-    .modo-oscuro {
-        --primary-color: #000;
-        --secondary-color: #fff;
-        --text-color: #fff;
-        --bg-color: #000;
-    }
-
-    .activar-modo-oscuro {
-        background: var(--secondary-color);
-        color: var(--text-color);
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }      
+    }     
   
     .liveChat img {
         width: 3.5rem;

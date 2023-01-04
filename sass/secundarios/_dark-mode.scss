@@ -1,18 +1,18 @@
 :root {
-    --primary-color: #fff;
-    --secondary-color: #000;
+    --primary-color:#000;
+    --secondary-color: #fff;
     --text-color: #000;
     --bg-color: #fff;
 }
   
-.modo-oscuro {
-    --primary-color: #000;
-    --secondary-color: #fff;
+.dark-mode {
+    --primary-color:#fff;
+    --secondary-color: #000;
     --text-color: #fff;
     --bg-color: #000;
 } 
 
-.activar-modo-oscuro {
+.toggle-dark-mode {
     background: var(--secondary-color);
     color: var(--text-color);
     border: none;
@@ -20,4 +20,3 @@
     font-size: 16px;
     cursor: pointer;
 }
-  

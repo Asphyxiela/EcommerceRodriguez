@@ -1,5 +1,5 @@
 body{
-    background-color: $color-fondo;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
